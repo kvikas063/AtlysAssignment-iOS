@@ -59,8 +59,10 @@ private extension TopCarouselView {
     
     func resetTransform() {
         carouselViews.forEach { view in
-            view.value.transform = .identity
             view.value.layer.cornerRadius = 0
+            UIView.animate(withDuration: 0.1) {
+                view.value.transform = .identity
+            }
             self.sendSubviewToBack(view.value)
         }
     }
@@ -69,7 +71,7 @@ private extension TopCarouselView {
         if let view = carouselViews[currentIndex] {
             view.layer.cornerRadius = 8
             UIView.animate(withDuration: 0.2) {
-                view.transform = .init(scaleX: 1.2, y: 1.2)
+                view.transform = .init(scaleX: 1.25, y: 1.25)
             }
             self.bringSubviewToFront(view)
             holderStackView.bringSubviewToFront(view)
