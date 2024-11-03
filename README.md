@@ -13,5 +13,5 @@
 This project contains `LoginViewController` swift file which holds the UI design for above requirement.
 
 - Implemented using `UIKit` framework with the help of auto layout as per the requirement.
-- Horizontal Carousel is implemented using Scroll View, without using `UICollectionView and UITableView`
+- Horizontal Carousel is implemented using `ScrollView`, without using `UICollectionView and UITableView`
 - MVVM (Model View ViewModel) app architecture is used to implement this project and can be scaled too, using module based structure.
